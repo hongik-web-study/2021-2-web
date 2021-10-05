@@ -1,0 +1,15 @@
+(1-4) heading 태그 알아보기
+
+document.head.parentNode.removeChild(document.head);
+-> head를 지우는 Javascript 코드
+-> CSS가 지워짐
+=> CSS는 head에 넣음
+
+www.naver.com
+제일중요한거: 네이버 (자기 사이트 이름)
+검색창, 실시간, 뉴스, 쇼핑 등등
+
+-> heading: 머리말
+  - 중요도에 따라 h1, h2, ... , h6
+  - 키워드
+* headingsMap 확장프로그램
