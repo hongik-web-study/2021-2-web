@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <!-- react 프로젝트를 만들 때 항상 넣어주어야 할 2가지 -->
+
+    <!-- react가 동작하는 핵심 코드가 들어있음 -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <!-- react DOM -->
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!-- Babel은 실험적인 문법들을 javascript에서 사용할 수 있도록 해준다 -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+    <!-- 결과: <div id="root"><button>Like</button></div> -->
+    <div id="root"></div>
+    <script type="text/babel">
+      const e = React.createElement;
+
+      class LikeButton extends React.Component {
+        // constructor는 그냥 암기...
+        constructor(props) {
+          super(props);
+          this.state = {
+            liked: false
+          };
+        }
+
+        render() {
+          // 얘를 JSX (JS + XML) 이라고 부름
+          return (
+            <button
+              type="submit"
+              onClick={() => {
+                this.setState({ liked: true });
+              }}>
+              {this.state.liked === true ? 'Liked' : 'Like'}
+            </button>
+          );
+          // return e(
+          //   'button',
+          //   {
+          //     onClick: () => {
+          //       this.setState({ liked: true });
+          //     },
+          //     type: 'submit'
+          //   },
+          //   this.state.liked === true ? 'Liked' : 'Like'
+          // ); // <button onclick="onclick">Like</button>
+        }
+      }
+    </script>
+
+    <script type="text/babel">
+      // 실제로 화면에 render 해줌
+
+      // ReactDOM.render(e(LikeButton), document.querySelector('#root'));
+      ReactDOM.render(
+        // <button onClick={onclick}>Like</button>
+        // <button onClick={onclick}>Like</button>
+        // <button onClick={onclick}>Like</button>
+        // <button onClick={onclick}>Like</button>
+        <div>
+          <LikeButton />
+          <LikeButton />
+          <LikeButton />
+          <LikeButton />
+        </div>,
+        document.querySelector('#root')
+      ); // 반드시 /를 붙여주는 것이 좋음!
+    </script>
+  </body>
+</html>
