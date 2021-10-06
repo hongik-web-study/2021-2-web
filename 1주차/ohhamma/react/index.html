@@ -2,10 +2,11 @@
     <head>
         <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
         <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     </head>
     <body>
         <div id="root"></div> <!-- 결과: <div id="root"><button>Like</button></div> -->
-        <script>
+        <script type="text/babel">
             const e = React.createElement;
 
             class LikeButton extends React.Component {
@@ -17,18 +18,24 @@
                 }
 
                 render() {
-                    return e(
-                        'button', 
-                        { onClick: () => { this.setState({ liked: true })}, type: 'submit' }, 
-                        this.state.liked === true ? 'Liked' : 'Like'
-                    );
-                    // <button onclick="() => { console.log('clicked) }" type="submit">Like</button>
-                    // $('button')text('Liked');
+                    return <button type="submit" onClick={() => { this.state({ liked: true })}}>
+                        {this.state.liked === true ? '좋아요 누름' : '좋아요'}
+                        </button>;
+                    // JSX ( JS + XML )
                 }
             }
         </script>
-        <script>
-            ReactDOM.render(e(LikeButton), document.querySelector('#root'));
+        <script type="text/babel">
+            ReactDOM.render(<div>
+                <LikeButton />
+                <LikeButton />
+                <LikeButton />
+                <LikeButton />
+                <LikeButton />
+                <LikeButton />
+                <LikeButton />
+                <LikeButton />
+            </div>, document.querySelector('#root'));
         </script>
     </body>
 </html>
