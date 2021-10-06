@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" /> <!--문서에 대한 정보-->
+        <!--한글이 깨지지 않게 UTF-8--> 
+        <!--태그 안에 넣을 게 없다면 <meta /> 이런 식으로 한 번에 열고 닫을 수 있음-->
+        <!--닫는 태그 매우 중요-->
+        <title>&lt;네이버&gt;</title> <!--페이지 제목-->
+        <!--태그 안에서 <꺽쇠>를 표현하고 싶을 때 &lt;, &gt; 이용-->
+        <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico?1" />
+        <!--F12/ctrlF/favicon-->
+        <!-- ./는 현재 폴더에서의 경로, 그냥 /는 최상위폴더에서 경로-->
+        <!--document.head.parentNode.removeChild(document.head);를 하면 
+            <body> 위에 <head>가 사라지는 자바스크립트 코드
+        근데 이 코드를 실행하면 CSS가 사라짐. CSS는 <head>태그 안에 들어있다는 사실-->
+    </head>
+    <body>
+        <h1>
+            <a href="https://www.naver.com">네이버</a>
+        </h1>  <!--<heading>태그--> <!--<a>태그로 링크 생성-->
+        <h2>검색창</h2>
+        <fieldset>
+            <legend>검색</legend>
+            <input /> <!--inout이 대표적으로 안에 컨텐츠가 없음. 글을 쓰게 해 줌-->
+            <!--<textarea>태그는 좀 더 긴 글 쓸 떄-->
+            <!--
+            <input type = "checkbox" />
+            <input type = "checkbox" />  선택했다가 취소했다가 여러 개 선택 가능
+            <input type = "radio" name = "group" />
+            <input type = "radio" name = "group" />  name을 통해 같은 그룹으로 묶이면 택1만 가능
+            -->
+            <button>검색</button> <!--누를 수 있는 버튼 생성.-->
+            <!--커서는 손가락으로 바뀌지 않고 화살표 유지. 하지만 CSS로 바꿔줄 수 있긴 함-->
+        </fieldset>
+        <ul> <!--unorderend list--> <!--<ol>태그를 이용하면 ordered list-->
+            <li>메일</li><!--list item-->
+            <li>카페</li>
+            <li>블로그</li>
+            <li>지식인</li>
+            <li>쇼핑</li>
+        </ul>
+        <h2>실시간</h2>
+        <h3>연합뉴스</h3>
+        <ol>
+            <li>충격) 제로초 지금 목이 아파.. </li>
+            <li>속보) 방송 종료하고 싶어.. </li>
+            <li>중대) 다음 강좌 언제인가</li>
+        </ol>
+        <h3>언론사 목록</h3>
+        <ul>
+            <li><img src = "./세계일보.png" alt = "세계일보" /></li>
+            <!--alt는 화면에는 안 보이지만 이미지에 대한 설명 스크린리더에 반영-->
+            <li><img src = "./매일경제.png" alt = "매일경제" /></li>
+        </ul>
+        <!--혹시 글자를 기울이거나 강조하고 싶다면 i, em, b, span(사실 얘는 그냥 텍스트) 등의 태그-->
+        <h3>로그인</h3>
+    </body>
+</html>

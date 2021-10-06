@@ -1,0 +1,28 @@
+/* 선택자(selector) : HTML의 태그 선택
+이거 떄문에 <div>태그에 id를 달아줘야 함 */
+/* HTML에서 이 CSS파일을 인식할 수 있도록 <head>에 <link>를 남겨줘야 함 */
+
+div#header-center{ /* #을 통해 id명시 */
+    /* div#header-center, div#yoonsseo 이런 식으로 속성이 같다면 
+    여러 개의 태그에 대해 한 번에 작성 가능 */
+    /* <div>태그는 워낙 많아서 #header-center 이렇게만 써도 됨 */
+    margin : 0 auto;
+    width : 1080px;
+}
+
+div#header-search > h1 {
+    /* ">"를 이용해서 자식 태그 지정 */
+    /* #header-center h1 이렇게 하면 자손 태그 지정 */
+    /* 사실 자식도 자손이라 > 안 써도 됨*/
+    width : 280px;
+    display : inline-block; /* 나란히 배치 */
+}
+
+#header-search h2 {
+    display : none;
+}
+
+#header-search fieldset {
+    width : 520px;
+    display : inline-block;
+}
