@@ -1,0 +1,15 @@
+(1-6) 리스트와 이미지 태그 알아보기
+
+tab 처리기 (UI/UX)
+
+<ul>: unorderd list (bullet 정렬)
+<ol>: ordered list (숫자 정렬)
+<li>: list item
+
+<img />: 이미지에 대한 부가적인 정보
+  - src="" 파일의 위치
+  - alt="" 설명
+
+<i>: 기울임 태그
+<b>: bold
+<span>: 일반 글씨
