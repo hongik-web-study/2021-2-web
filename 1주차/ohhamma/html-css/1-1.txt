@@ -1,0 +1,12 @@
+(1-1) HTML, CSS 이해하기
+
+HTML: 웹의 구조, 컨텐츠
+CSS: 디자인
+Javascript: 웹의 동작, 웹의 모든것
+
+www.naver.com (F12) -> Elements(HTML)
+document.head.parentNode.removeChild(document.head);
+-> CSS가 사라짐 (문서로 보임)
+-> iFrame은 영향X
+
+* 장애인분들 -> HTML 중요

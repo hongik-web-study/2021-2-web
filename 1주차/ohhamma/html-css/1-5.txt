@@ -1,0 +1,17 @@
+(1-5) 주석과 a, fieldset, input, button
+
+<a>: 링크 (다른 웹페이지로 넘어감)
+  - <a href="https://www.naver.com">: 주소를 적어줌 (부가정보)
+    * 부가정보 = 속성, attribute(s)
+  - <html lang="ko">: 한국어
+
+<!-- 주석입니다 -->: comment, 주석
+
+<fieldset>
+<legend>: 범례
+<input />: 입력창
+  - type="checkbox" : 네모 체크박스 (선택&취소 가능)
+  - type="radio" : 동그라미 체크박스 (양자택일), 범위 설정 가능
+    ex) <input type="radio" name="group" />
+<textarea>: 긴글 쓸때, 사이즈 변화 가능
+<button>: 버튼태그 (화살표 모양 커서)
