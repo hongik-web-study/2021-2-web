@@ -1,0 +1,34 @@
+
+
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+#header-center {
+    margin: 0 auto;
+    width: 1080px;
+}
+
+#header-search h1 {
+    display: inline-block;
+    width: 222px;
+    height: 52px;
+    background-position: 0 -158px;
+    background-repeat: no-repeat;
+    background-image: url(./un_lis/plastic.png);
+    background-size: 444px 439px;
+}
+
+#header-search h2 {
+    display: none;
+}
+
+#header-search fieldset {
+    width: 520px;
+    display: inline-block;
+}
