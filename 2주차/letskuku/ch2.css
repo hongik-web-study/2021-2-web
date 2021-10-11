@@ -1,0 +1,40 @@
+/* Cascading Style Sheet */
+/* 선택자(selector): html 태그 선택 */
+
+/*
+#은 html의 id 속성 뜻함
+여러 태그에 동시 적용 시 ,와 함께 태그 추가
+*/
+
+div#header-center { /* div 태그는 생략 가능 */
+    margin: 0 auto; /* 컨텐츠가 가운데 정렬되는 것 x, 구역 자체가 가운데 정렬 */
+    width: 1080px; /* 픽셀은 상대적인 길이, 모니터의 픽셀 알아야함 */
+}
+
+#header-search > h1 {
+    width: 222px;
+    display: inline-block;
+}
+
+/*
+#header-center h1 {
+    띄어쓰기만 하면 자손 선택자
+    > 붙이면 자식 선택자
+}
+*/
+
+#header-search h2 {
+    display: none; /* 화면에 안 보임 */
+}
+
+#header-search fieldset {
+    width: 586px;
+    display: inline-block;
+}
+
+/*
+margin: 경계, 이 안으로는 들어갈 수 x, 억지로 태그 밀어넣는 방법 있긴 함
+span 태그의 display는 inline
+inline: 컨텐츠 너비만 차지
+inline-block: 너비&높이 지정 가능
+*/
