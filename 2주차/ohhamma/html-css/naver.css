@@ -18,7 +18,7 @@
 */
 
 #header-search h2 {
-    display: none;
+    display: none;  /* 추가: 화면에도 안보이고 스크린리더도 못읽음 */
 }
 
 #header-search fieldset {
