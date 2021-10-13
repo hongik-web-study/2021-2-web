@@ -1,0 +1,31 @@
+
+/* Cascading Style Sheet 덮어 씌워지는 속성 있음 */
+/* html 태그에 에 적용된 css가 div태그에도 적용됨 */
+
+/* 선택자(selector)*/
+
+div#header-center{
+    margin: 0 auto; 
+    width: 1080px;
+}
+
+/* header-search의 자식 h1 선택 */
+div#header-search > h1{
+    width: 200px;
+    display: inline-block; 
+}
+
+/* header-search의 자손 h1 선택자 - 주로 자손선택을 많이함 효과 같음
+div#header-center h1{
+    width: 280px;
+}
+*/
+
+div#header-search > h2{
+    display: none; /* 스크린 리더도 못 읽는 오류 있음 다음 시간 다른 방법 사용 */
+}
+
+div#header-search fieldset{
+    width: 400px;
+    display: inline-block; 
+}
