@@ -1,0 +1,31 @@
+/* Cascading Style Sheet */
+/* 선택자(selector)
+   div생략가능
+   ,로 여러개 동시에 적용가능 */
+div#header-center {
+  margin: 0 auto;
+  width: 1080px;
+}
+
+/* F12 > Console > screen.width 입력하면 내 모니터의 가로 픽셀 나옴 */
+
+/* 자식태그 선택자 : 바로 아래에 있는것 
+   > 생략가능 */
+#header-search > h1 {
+  width: 280px;
+  display: inline-block; /* margin이 생기지 않게 하기 위해 inline- 을 붙여줌 */
+}
+
+/* 자손태그 선택자 : 자식 손자 증손자 이런거 다 
+#header-center h1 {
+} */
+
+/* 보이면 안되는 부분. but 이건 스크린리더도 못읽으니 다른 방법 써야함 */
+#header-search h2 {
+  display: none;
+}
+
+#header-search fieldset {
+  width: 520px;
+  display: inline-block;
+}
