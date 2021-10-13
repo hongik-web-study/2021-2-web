@@ -1,0 +1,36 @@
+/* html에서 디자인과 웹프로그래밍을 같이 하는 것은 css의 역할과
+구분이 명확히 되지않는 것이므로 css파일을 따로 만들어 디자인을 책임진다*/
+
+/*CSS-Cascading Style Sheet*/
+
+/*부모, 조상태그의 css가 있으면 자식의 속성이 덮어쓴다*/
+
+/* 선택자(selector)*/
+
+#header-center  {
+    margin: 0 auto; 
+    width: 1080px; /*pixel - 상대적인 길이 우리의 픽셀(1536px)중 1080을 차지*/
+}
+
+#header-search > h1 /*div header-search의 자식인 h1에 디자인 적용*/{
+    width: 280px;
+    display: inline-block; /*margin의 크기를 줄임*/
+}
+
+/*#header-center h1 {} -> h1은 header-center의 자손태그임으로 자손태그에게 디자인 적용하려면 이렇게 표가한다 - 자손선택자*/ 
+
+
+#header-search h2 {
+    display: none; /*스크린리더에도 안보임*/
+}
+
+#header-search fieldset{
+    width: 520px;
+    display: inline-block; /*margin의 크기를 줄임*/
+}
+
+
+
+
+
+/*div (div)#header-center 는 생략해서 안써도 되지만 header는 생략하면 안된다 header#header-center*/
