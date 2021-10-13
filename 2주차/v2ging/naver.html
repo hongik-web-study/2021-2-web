@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+    <!--document.head.parentNode.removeChild(document.head);-->
+    <head>
+        <meta charset="utf-8" /> <!--utf-8 한글 깨짐 방지 / 닫는 태그 습관 들이기 - input처럼 한줄로 끝나는 경우 존재 /> -->
+        <title>네이버</title>
+        <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico?1" />  
+        <!--rel, type favicon인걸 의미/알려줌 href = 파일경로 슬래시(/) ch1에 들어 있는 파일-->
+        <link rel="stylesheet" href="./naver.css" />
+        <!--html에게 css 파일 존재 알리기 ./~~~ 현재파일에 들어있음-->
+    </head>
+    <body>
+    <header>
+        <!--<div id= "header">-->
+        <div id="header-center">
+            <!-- 가운데 정렬을 위한 div / center->없어진태그-->
+            <!--header tag를 기준으로 구역자체가 가운데 정렬 / div tag 100% 차지 -> 너비 줄여주기-->
+            <!--css 속성명 : 속성값; 속석명2 : 속성값2;-->
+            <!--인라인스타일 -> 권장x-->
+            <div>
+                <span>네이버를 시작페이지로</span>
+                <span>쥬니어네이버</span>
+                <span>해피빈</span>
+            </div>
+    
+            <div id="header-search">
+                <h1>
+                    <a href="https://www.naver.com">네이버</a>
+                    <!-- 속성(attribute)입니다 -->
+                </h1>
+                <h2>검색창</h2>
+                <fieldset>
+                    <legend>검색</legend>
+                    <input /> <!-- textarea: 긴 글 쓸 때 유용, 크기 조절 가능 -->
+                    <!--<input type = "checkbox" />
+                                    <input type = "checkbox" 네모네모 />
+                                    <input type = "radio" name ="group" 둘 중 하나/>
+                                    <input type = "radio" name ="group" /> -->
+                    <button>검색</button>
+                    <!--클릭이 되는 버튼 -->
+                </fieldset>
+            </div>
+        </div>
+    </header>
+        <nav><!--<div id = "nav"> 네비게이션-->
+            <ul>
+                <!-- unordered list-->
+                <!-- ol - ordered list-->
+                <li>메일</li> <!-- list item-->
+                <li>카페</li> <!-- list item-->
+                <li>블로그</li> <!-- list item-->
+                <li>지식인</li> <!-- list item-->
+                <li>쇼핑</li> <!-- list item-->
+                <li>네이버페이</li> <!-- list item-->
+                <li>네이버쇼핑</li> <!-- list item-->
+            </ul>
+        </nav>
+        <main></main><!--<div id = "main">-->
+            <h2>실시간 검색어</h2>
+            <h3>연합뉴스</h3>
+            <ol>
+                <li>충격) 지금 시간 오후 10시 23분</li>
+                <li>졸려서 얼른 눕고싶음</li>
+                <li>드르렁</li>
+            </ol>
+            <h3>언론사 목록</h3>
+            <ul>
+                <!-- src:파일 위치 / alt:설명 스크린리더가 읽어 시각장애인에게 도움 -->
+                <li><img src="./한국일보.png" alt="한국일보" /></li>
+                <li><img src="./뉴스데일리.png" alt="뉴스데일리" /></li>
+                <li><img src="./이투데이.png" alt="이투데이" /></li>
+                <li><img src="./KBS.png" alt="KBS" /></li>
+                <li><img src="./YTN.png" alt="YTN" /></li>
+            </ul>
+            <!--<bold>굵은 글씨</bold>
+                <span>얇은 글씨</span> html이 디자인까지 맡아도 되나? 라는 논란-->
+            <h3>로그인</h3>
+            <h3>뉴스</h3>
+            <h3>법률</h3>
+            <h3>쇼핑</h3>
+        </main>
+        <footer>
+            <div>공지사항</div>
+            <div>creaters</div>
+            <div>회사소개</div>
+        </footer>
+    </body>
+</html>
