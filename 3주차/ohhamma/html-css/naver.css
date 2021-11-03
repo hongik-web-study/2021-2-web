@@ -1,0 +1,176 @@
+* { /* 모든 태그 */
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#fixed {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+
+/* Cascading Style Sheet */
+/* 선택자(selector) */
+.blind {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+}
+
+.center-align {
+    margin: 0 auto;
+    width: 1080px;
+}
+
+#header-search a {
+    text-decoration: none;
+}
+
+#header-search h1 {
+    width: 198px;
+    height: 48px;
+    display: inline-block;
+    /*background-image: url(./sp_search.png);*/
+    /*background-position: -4px -10px;*/
+    /*background-repeat: no-repeat;*/
+    background: url(./sp_search.png) -4px -4px no-repeat;
+    /*text-indent: 100%;*/
+    /*overflow: hidden;*/
+    vertical-align: middle;
+    position: relative; /* static인 현재 위치를 기준으로 */
+    top: -6px;
+}
+
+#header-search h1 span {
+    display: none;
+}
+
+/*
+#header-center h1 {
+    자손 선택자
+}
+*/
+
+#header-search h2 {
+    display: none;  /* 추가: 화면에도 안보이고 스크린리더도 못읽음 */
+}
+
+#header-search fieldset {
+    margin-left: 20px;
+    /*padding-top: 12px;*/
+    /*padding-bottom: 12px;*/
+    /*padding-left: 10px;*/
+    /*padding-right: 0;*/
+    padding: 12px 0 12px 10px;
+    width: 521px;
+    height: 49px;
+    display: inline-block;
+    border: 2px solid #03cf5d; /* hex */
+    vertical-align: middle;
+    position: relative;
+}
+
+#header-search fieldset input {
+    border: none;
+    padding: 0;
+    outline: none;
+    vertical-align: top;
+    width: 405px;
+    height: 23px;
+}
+
+#header-search fieldset button {
+    width: 49px;
+    height: 49px;
+    border: none;
+    padding: 0;
+    background: #03cf5d;
+    position: absolute; /* 절대적(화면을 기준으로), 다른 컨테이닝 블록을 기준으로 */
+    right: -2px;
+    top: -2px;
+}
+
+#search-image {
+    background-image: url(./sp_search.png);
+    background-position: -3px -60px;
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+    margin: 14px;
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li span:first-child {
+    height: 16px;
+    display: inline-block;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_nav.png);
+    background-repeat: no-repeat;
+    margin-left: 14px;
+}
+
+nav li:first-child span:first-child {
+    width: 25px;
+    background-position: 0 -285px;
+    margin-left: 0; /* Cascading(덮어씌우기) */
+}
+/* CSS 우선순위 */
+/* !important > inline style > id > class,다른 attribute > tag */
+/* 금/은/동메달처럼 개수로 우선순위 결정*/
+/* 꼼수: 여러번 연달아 써서 우선순위 높일수 있음 */
+/* 같은 우선순위일때는 아래 코드가 우선*/
+
+nav li:nth-child(2) span:first-child {
+    width: 27px;
+    background-position: -279px -52px;
+}
+
+nav li:nth-child(3) span:first-child {
+    width: 40px;
+    background-position: -100px -182px;
+}
+
+nav li:nth-child(4) span:first-child {
+    width: 40px;
+    background-position: -101px -156px;
+}
+
+nav li:nth-child(5) span:first-child {
+    width: 26px;
+    background-position: -279px -156px;
+}
+
+nav li:nth-child(6) span:first-child {
+    width: 25px;
+    background-position: -70px -285px;
+}
+/* nth-child() - 유지보수 측면에서 별로.. 차라리 class가 나음 */
+
+
+/* 컨테이닝 블록 찾는 연습 */
+/* display: inline;이면 컨테이닝 블록이 될수없음 */
