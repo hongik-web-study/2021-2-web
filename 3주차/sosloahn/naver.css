@@ -1,0 +1,98 @@
+/* *는 모든태그를 의미, border-box: 모든 태그를 border 기반으로 계산하게 만든다 */
+
+/*css reset -> 기본 브라우저 css를 없에는것*/
+
+* {
+    box-sizing: border-box; /*border, padding, content 합쳐서 넓이가됨*/
+
+}
+/*앞에 .이붙으면 class*/
+/*blind class를 만들어주면 스크린 리더에만 읽히는 검색이 나타난다*/
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+#header-center  {
+    margin: 0 auto; 
+    width: 1080px; 
+}
+
+#header-search  h1 {
+    width: 222px;
+    height: 54px;
+    display: inline-block;
+    background-image: url(./sp_search.png);
+    background-position: 0 -158px;
+    background-repeat: no-repeat;
+    /*background: url(./sp_search.png) 0 -158px no-repeat -> 이렇게 위의 세문장을 줄일 수 있다*/
+    content: ' ';
+    background-size: 444px 439px;
+    vertical-align: middle;
+
+    /*text-indent: 100%;
+    overflow: hidden; 이걸로 스크린에 네이버 안보이게 할 수 있음*/
+}
+
+#header-search > h1 span { /*위의 꼼수 대신 그냥 이걸 사용해도되지만 나중에 스크린 리더에도 안보이므로 지금만 쓰고 나중엔 쓰지말자*/
+    display: none;
+}
+    
+ 
+
+#header-search h2 {
+    display: none; /*스크린리더에도 안보임*/
+}
+
+#header-search fieldset{
+    margin-top:20px; 
+    margin-left:20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+    padding-right: 0;
+    
+    border: 2px solid #03cf5d; /* hex 표기법, rgb(60, 121, 20)과도 똑같다 이건 rbgb 표기법*/
+
+    /*padding: 위 오 아 왼*/
+
+    width: 586px;
+    height: 56px;
+    display: inline-block; 
+    vertical-align: middle; /*네이버 로고와 같이 가운데로 정렬하기 위해 쓰이는 문장*/
+
+}
+
+#header-search fieldset input { /*검색창의 브라우저가 넣어준 기본 css인 input이 자동으로 배치되는것을 해결해주기 위해 사용, 네모박스 없에줌*/
+    border: none;
+    padding: 0;
+    outline: none;
+}
+
+#header-search fieldset button { 
+    width: 56px;
+    height: 56px;
+    border: none;
+    padding:0;
+    background: #03cf5d;
+    
+}
+
+#search-image {
+    width: 22px;
+    height: 22px;
+    background-image: url(./sp_search.png);
+    background-position: -420px -208px;
+    background-repeat: no-repeat;
+    display: inline-block;
+
+
+}
+
+
+/*형제 태그 끼리 height가 달라지면 정렬이 달라짐*/
+
